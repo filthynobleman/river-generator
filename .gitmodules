@@ -1,0 +1,9 @@
+[submodule "ext/stb"]
+	path = ext/stb
+	url = git@github.com:nothings/stb.git
+[submodule "ext/json"]
+	path = ext/json
+	url = git@github.com:nlohmann/json.git
+[submodule "ext/sfml"]
+	path = ext/sfml
+	url = git@github.com:SFML/SFML.git
