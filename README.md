@@ -10,7 +10,7 @@ window. If you are working on WSL, please be sure to update to WSL2.
 
 First, clone the repository and update the submodules.
 ```sh
-git clone ... --recursive
+git clone https://github.com/filthynobleman/river-generator.git --recursive
 cd river-generator
 git submodule update --init --recursive
 ```
