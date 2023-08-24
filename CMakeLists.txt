@@ -33,7 +33,8 @@ add_library(RTLib STATIC    "${CMAKE_SOURCE_DIR}/src/sfLine.cpp"
                             "${CMAKE_SOURCE_DIR}/src/sfSmoothLine.cpp"
                             "${CMAKE_SOURCE_DIR}/src/graph.cpp"
                             "${CMAKE_SOURCE_DIR}/src/delaunay.cpp"
-                            "${CMAKE_SOURCE_DIR}/src/spline.cpp")
+                            "${CMAKE_SOURCE_DIR}/src/spline.cpp"
+                            "${CMAKE_SOURCE_DIR}/src/gauss_blur.cpp")
 target_link_libraries(RTLib SFML::Graphics)
 
 add_executable(TestSFML "${CMAKE_SOURCE_DIR}/src/main.cpp")

@@ -76,6 +76,8 @@ int main(int argc, const char* const argv[])
 
     auto tex = renderTexture.getTexture();
     auto img = tex.copyToImage();
+    gauss_blur(img, 60, 40, 10);
+    std::cout << "Blurred." << std::endl;
     if (!img.saveToFile("my_first_line.png"))
     {
         std::cerr << "Error while writing the image." << std::endl;

@@ -24,8 +24,6 @@ Spline::Spline(const std::vector<sf::Vector2f>& P)
     }
     m_T = Eigen::VectorXf::LinSpaced(P.size(), 0.0f, P.size() - 1);
     m_T /= P.size() - 1;
-    
-    std::cout << "Got input." << m_T.rows() << std::endl;
 
     // This should be made sparse, but these systems are usually very small,
     // so we go for the easy solution
@@ -45,7 +43,6 @@ Spline::Spline(const std::vector<sf::Vector2f>& P)
         rh[i] += (m_X[i + 1] - m_X[i]) * M(i, i + 1) * M(i, i + 1);
         rh[i] *= 3.0f;
     }
-    std::cout << "Filled general." << std::endl;
     M(0, 0) = 2 / (m_T[1] - m_T[0]);
     M(0, 1) = 1 / (m_T[1] - m_T[0]);
     M(P.size() - 1, P.size() - 1) = 2 / (m_T[P.size() - 1] - m_T[P.size() - 2]);
@@ -53,9 +50,7 @@ Spline::Spline(const std::vector<sf::Vector2f>& P)
     rh[0] = 3 * (m_X[1] - m_X[0]) * M(0, 1) * M(0, 1);
     rh[P.size() - 1] = 3 * (m_X[P.size() - 1] - m_X[P.size() - 2]) * M(P.size() - 1, P.size() - 2) * M(P.size() - 1, P.size() - 2);
 
-    std::cout << "Filled special." << std::endl;
     m_Kx = M.colPivHouseholderQr().solve(rh);
-    std::cout << "Solved system." << std::endl;
 
     for (int i = 1; i < P.size() - 1; ++i)
     {

@@ -17,4 +17,4 @@
 
 
 std::set<std::pair<int, int>> delaunay(const std::vector<sf::Vector2f>& P);
-std::vector<sf::Vector2f> spline(const std::vector<sf::Vector2f>& P, int Resolution);
+void gauss_blur(sf::Image& Img, int ksx, int ksy, float sigma);
