@@ -87,13 +87,13 @@ void sfSmoothLine::draw(sf::RenderTarget &target,
 
         rect.setFillColor(col);
         rect.setScale({ m_len, thickness });
-        target.draw(rect);
+        target.draw(rect, states);
         rect.setScale({ -m_len, thickness });
-        target.draw(rect);
+        target.draw(rect, states);
         rect.setScale({ m_len, -thickness });
-        target.draw(rect);
+        target.draw(rect, states);
         rect.setScale({ -m_len, -thickness });
-        target.draw(rect);
+        target.draw(rect, states);
 
     }
 }

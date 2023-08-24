@@ -7,3 +7,6 @@
 [submodule "ext/sfml"]
 	path = ext/sfml
 	url = git@github.com:SFML/SFML.git
+[submodule "ext/eigen3"]
+	path = ext/eigen3
+	url = git@github.com:libigl/eigen.git
