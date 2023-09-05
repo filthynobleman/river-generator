@@ -108,9 +108,9 @@ std::set<std::pair<int, int>> delaunay(const std::vector<sf::Vector2f>& PP)
 
     // Create super triangle that contains all points
     sf::Vector2f STV[3];
-    STV[0] = sf::Vector2f(- 0.1f, - 0.1f);
-    STV[1] = STV[0] + sf::Vector2f(2.5f, 0);
-    STV[2] = STV[0] + sf::Vector2f(0, 2.5f);
+    STV[0] = sf::Vector2f(- 0.5f, - 0.5f);
+    STV[1] = STV[0] + sf::Vector2f(3.0f, 0);
+    STV[2] = STV[0] + sf::Vector2f(0, 3.0f);
 
     P.insert(P.end(), STV, STV + 3);
     Tris.emplace(nPts, nPts + 1, nPts + 2);

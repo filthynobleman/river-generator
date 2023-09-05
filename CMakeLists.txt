@@ -34,9 +34,14 @@ add_library(RTLib STATIC    "${CMAKE_SOURCE_DIR}/src/sfLine.cpp"
                             "${CMAKE_SOURCE_DIR}/src/graph.cpp"
                             "${CMAKE_SOURCE_DIR}/src/delaunay.cpp"
                             "${CMAKE_SOURCE_DIR}/src/spline.cpp"
-                            "${CMAKE_SOURCE_DIR}/src/gauss_blur.cpp")
-target_link_libraries(RTLib SFML::Graphics)
+                            "${CMAKE_SOURCE_DIR}/src/gauss_blur.cpp"
+                            "${CMAKE_SOURCE_DIR}/src/river.cpp"
+                            "${CMAKE_SOURCE_DIR}/src/hmap.cpp"
+                            "${CMAKE_SOURCE_DIR}/src/noises.cpp"
+                            "${CMAKE_SOURCE_DIR}/src/parser.cpp"
+                            "${CMAKE_SOURCE_DIR}/src/plane.cpp")
+target_link_libraries(RTLib STB SFML::Graphics)
 
-add_executable(TestSFML "${CMAKE_SOURCE_DIR}/src/main.cpp")
-target_link_libraries(TestSFML STB SFML::Graphics RTLib)
-set_target_properties(TestSFML PROPERTIES CXX_STANDARD 17)
+add_executable(RiverGen "${CMAKE_SOURCE_DIR}/src/main.cpp")
+target_link_libraries(RiverGen STB SFML::Graphics RTLib)
+set_target_properties(RiverGen PROPERTIES CXX_STANDARD 17)

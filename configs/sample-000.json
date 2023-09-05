@@ -1,0 +1,33 @@
+{
+    "size" : 1024,
+    "perlin" :
+    {
+        "weight" : 0.6,
+        "scale" : 5.0,
+        "octaves" : 6
+    },
+    "voronoi" :
+    {
+        "weight" : 0.4,
+        "scale" : 6.0
+    },
+    "gauss" :
+    {
+        "ksx" : 60,
+        "ksy" : 40,
+        "sigma" : 10.0
+    },
+    "river" :
+    {
+        "nodes" : 100,
+        "samples" : 30,
+        "thickness" : 150.0,
+        "seed" : 0
+    },
+    "plane" :
+    {
+        "delta" : 1.0,
+        "width" : 256,
+        "height" : 256
+    }
+}
