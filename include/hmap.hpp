@@ -81,4 +81,5 @@ public:
     void Quantize();
     bool IsDirty() const;
     const unsigned char* const Quantized() const;
+    const float* const RawData() const;
 };

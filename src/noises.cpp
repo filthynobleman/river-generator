@@ -3,6 +3,11 @@
  * 
  * @brief       Implement noises on heightmaps.
  * 
+ * @details     Noise and hash functions are taken and/or inspired from the
+ *              Blender's source code.
+ *              https://github.com/blender/blender/blob/main/intern/cycles/util/hash.h
+ *              https://github.com/blender/blender/blob/main/intern/cycles/kernel/osl/shaders/node_voronoi.h
+ * 
  * @author      Filippo Maggioli\n
  *              (maggioli@di.uniroma1.it, maggioli.filippo@gmail.com)\n
  *              Sapienza, University of Rome - Department of Computer Science

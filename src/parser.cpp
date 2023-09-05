@@ -10,8 +10,14 @@
  * @date        2023-09-05
  */
 #include <parser.hpp>
+#include <filesystem>
+#include <algorithm>
+#include <cctype>
 
-
+char my_tolower(char c)
+{
+    return std::tolower(c);
+}
 
 RiverParams parse_river_params(const std::string& filename)
 {
@@ -392,6 +398,26 @@ RiverParams parse_river_params(const std::string& filename)
     params.PlaneWidth = j["plane"]["width"];
     params.PlaneHeight = j["plane"]["height"];
 
+
+
+    // Output filenames
+    if (!j.contains("output_file"))
+    {
+        std::stringstream ss;
+        ss << "JSON parse error on file " << filename << std::endl;
+        ss << "File must contains attribute \"output_file\".";
+        throw std::runtime_error(ss.str());
+    }
+    if (!j["output_file"].is_string())
+    {
+        std::stringstream ss;
+        ss << "JSON parse error on file " << filename << std::endl;
+        ss << "Attribute \"output_file\" must be a string.";
+        throw std::runtime_error(ss.str());
+    }
+    params.OutHMap = j["output_file"];
+    std::transform(params.OutHMap.begin(), params.OutHMap.end(), params.OutHMap.begin(), my_tolower);
+    params.OutMesh = std::filesystem::path(params.OutHMap).replace_extension(".obj").string();
 
 
     return params;

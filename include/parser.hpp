@@ -36,6 +36,9 @@ struct RiverParams
     float PlaneDelta;
     int PlaneWidth;
     int PlaneHeight;
+
+    std::string OutHMap;
+    std::string OutMesh;
 };
 
 

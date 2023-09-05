@@ -233,3 +233,4 @@ void HeightMap::Quantize()
 }
 bool HeightMap::IsDirty() const { return m_QDirty; }
 const unsigned char* const HeightMap::Quantized() const { return m_QData; }
+const float* const HeightMap::RawData() const { return m_Data; }
