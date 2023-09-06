@@ -84,7 +84,7 @@ int main(int argc, const char* const argv[])
     int ntris = 0;
     HM.Normalize();
     triangulate_plane(HM, Params.PlaneWidth, Params.PlaneHeight, ntris, &verts, &tris);
-    export_plane_as_obj("my_first_river_scene.obj", nverts, ntris, verts, tris);
+    export_plane_as_obj(Params.OutMesh, nverts, ntris, verts, tris);
     
 
     return 0;
