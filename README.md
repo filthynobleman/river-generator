@@ -4,8 +4,8 @@ terrains containing rivers.
 
 <!-- ![Heightmap of a landscape with a river](./imgs/river-hmap.png)
 ![Rendering of landscape obtained from the heightmap](./imgs/river-render.png) -->
-<img src="./imgs/river-hmap.png" alt="Heightmap" width="440"></img>
-<img src="./imgs/river-render.png" alt="Heightmap" width="440"></img>
+<img src="./imgs/river-hmap.png" alt="Heightmap" width="350"></img>
+<img src="./imgs/river-render.png" alt="Heightmap" width="350"></img>
 
 ## Algorithm
 The algorithm evolves through a series of steps, combining multiple techniques together.  
