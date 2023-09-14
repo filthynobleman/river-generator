@@ -1,12 +1,12 @@
 [submodule "ext/stb"]
 	path = ext/stb
-	url = git@github.com:nothings/stb.git
+	url = https://github.com/nothings/stb.git
 [submodule "ext/json"]
 	path = ext/json
-	url = git@github.com:nlohmann/json.git
+	url = https://github.com/nlohmann/json.git
 [submodule "ext/sfml"]
 	path = ext/sfml
-	url = git@github.com:SFML/SFML.git
+	url = https://github.com/SFML/SFML.git
 [submodule "ext/eigen3"]
 	path = ext/eigen3
-	url = git@github.com:libigl/eigen.git
+	url = https://github.com/libigl/eigen.git
